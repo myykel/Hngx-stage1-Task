@@ -16,7 +16,7 @@ app.get('/api', (req, res) => {
     });
   }
 
-  const utc_time = currentTime.toISOString();
+  const utc_time = currentTime.toISOString().split('.')[0] + 'Z';
   const github_file_url = "https://github.com/myykel/Hngx-stage1-Task/blob/main/index.js"; 
   const github_repo_url = "https://github.com/myykel/Hngx-stage1-Task"; 
 
