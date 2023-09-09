@@ -3,7 +3,7 @@ const app = express();
 const port = process.env.PORT || 3000;
 
 // Define a route that handles GET requests with query parameters
-app.get('/info', (req, res) => {
+app.get('/api', (req, res) => {
   const { slack_name, track } = req.query;
   const current_day = new Date().toLocaleString('en-US', { weekday: 'long' });
   const currentTime = new Date();
@@ -17,7 +17,7 @@ app.get('/info', (req, res) => {
   }
 
   const utc_time = currentTime.toISOString();
-  const github_file_url = ""; 
+  const github_file_url = "https://github.com/myykel/Hngx-stage1-Task/blob/main/index.js"; 
   const github_repo_url = "https://github.com/myykel/Hngx-stage1-Task"; 
 
   // Return the JSON response
